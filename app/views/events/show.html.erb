@@ -1,10 +1,33 @@
-<p style="color: green"><%= notice %></p>
+<div class="event mt-3">
+  <div class="event-info row">
+    <div class="col-md-12">
+      <div class="thumbnail card bg-image ">
+        <%= content_tag 'div', '', class: 'event-background',
+                        style: "background-image: url(#{asset_path('event_thumb2.jpg')})" %>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class=" card-body">
+              <div class="caption card-text">
+                <div class="event-description">
+                  <h1><%= @event.title %></h1>
+                  <h3><%= l @event.datetime, format: :long %></h3>
+                  <h3><small><%= link_to @event.address,
+                                         "https://yandex.ru/maps/?text=#{@event.address}" %></small></h3>
+                  <p><%= @event.description %></p>
+                </div>
+                <% if current_user_can_edit?(@event) %>
 
-<%= render @event %>
+                  <div class="buffer-top">
+                    <%= link_to 'Изменить', edit_event_path(@event),
+                                class: 'btn btn-primary' %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div>
-  <%= link_to "Edit this event", edit_event_path(@event) %> |
-  <%= link_to "Back to events", events_path %>
-
-  <%= button_to "Destroy this event", @event, method: :delete %>
 </div>

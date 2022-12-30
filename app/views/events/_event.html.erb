@@ -1,2 +1,20 @@
-<div id="<%= dom_id event %>">
+<div class="col-sm-6 col-md-4 my-2">
+  <div class="thumbnail card bg-image ">
+
+    <%= content_tag 'div', '', class: 'event-background',
+                    style: "background-image: url(#{asset_path('event_thumb2.jpg')})" %>
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.5)">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class=" card-body">
+          <div class="caption card-text">
+            <div class="event-description">
+              <h4><%= link_to event.title, event_path(event), class: "link-info" %></h4>
+              <p><%= l event.datetime, format: :short %></p>
+              <div class="buffer-both"><%= event.address %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
