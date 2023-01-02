@@ -99,8 +99,11 @@ GEM
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
     erubi (1.12.0)
+    ffi (1.15.5)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    font-awesome-sass (6.2.1)
+      sassc (~> 2.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -190,6 +193,8 @@ GEM
     rubyzip (2.3.2)
     russian (0.6.0)
       i18n (>= 0.5.0)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.7.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -244,6 +249,7 @@ DEPENDENCIES
   devise
   devise-i18n
   font-awesome-rails
+  font-awesome-sass (~> 6.2.1)
   jbuilder
   jsbundling-rails
   pg

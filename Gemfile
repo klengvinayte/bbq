@@ -10,6 +10,7 @@ gem 'devise-i18n'
 gem 'russian'
 gem "rails-i18n"
 gem 'font-awesome-rails'
+gem "font-awesome-sass", "~> 6.2.1"
 
 gem "sprockets-rails"
 

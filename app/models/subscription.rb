@@ -12,6 +12,7 @@ class Subscription < ApplicationRecord
 
   # Или один email может использоваться только один раз (если анонимная подписка)
   validates :user_email, uniqueness: { scope: :event_id }, unless: -> { user.present? }
+  validate :email_already_taken
 
   def user_name
     if user.present?
@@ -29,4 +30,7 @@ class Subscription < ApplicationRecord
     end
   end
 
+  def email_already_taken
+    errors.add(:user, :taken) unless User.find_by(email: user_email).nil?
+  end
 end

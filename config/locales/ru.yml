@@ -59,6 +59,7 @@ ru:
 
 
   subscriptions:
+    error: "Такой email уже существует"
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
     form:
