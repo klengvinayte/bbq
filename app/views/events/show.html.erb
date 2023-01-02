@@ -18,7 +18,7 @@
                 <% if current_user_can_edit?(@event) %>
 
                   <div class="buffer-top">
-                    <%= link_to 'Изменить', edit_event_path(@event),
+                    <%= link_to t(".change"), edit_event_path(@event),
                                 class: 'btn btn-primary' %>
                   </div>
                 <% end %>
@@ -45,11 +45,12 @@
 
     <div class="col-md-4">
       <div class="event-owner">
-        <h4>Зовет:</h4>
+        <h4> <%= t(".inviting_user") %></h4>
+
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
       <div class="event-subscriptions">
-        <h4>Пойдут:</h4>
+        <h4><%= t(".subscribers") %></h4>
         <div>
           <p>
             <%= render partial: 'subscriptions/subscription',
@@ -58,8 +59,8 @@
         </div>
       </div>
       <div class="event-subscription-form">
-        <% unless @event.user == current_user %>
-          <h4>Я пойду:</h4>
+        <% unless @event.user == current_user || current_user.subscriptions.find_by(event_id: @event.id) %>
+          <h4><%= t(".subscribe") %></h4>
           <div>
             <%= render partial: 'subscriptions/form', locals: {
               subscription: @new_subscription || @event.subscriptions.build

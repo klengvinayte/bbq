@@ -20,6 +20,12 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+      subscription:
+        user_email: "Email"
+        user_name: "Имя"
+      comment:
+        user_name: "Имя"
+        body: "Комментарий"
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -48,7 +54,41 @@ ru:
   comments:
     comment:
       destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+    form:
+      send: "Отправить"
+
 
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+    form:
+      subscribe: "Подписаться"
+
+  users:
+    form:
+      save: "Сохранить"
+      back: "Назад"
+    registrations:
+      edit:
+        save: "Сохранить"
+        back: "Назад"
+      new:
+        sign_up: "Зарегистрироваться"
+    sessions:
+      new:
+        sign_in: "Войти"
+    shared:
+      links:
+        forgot_your_password?: "Забыли парооль?"
+        sign_up: "Зарегистрироваться"
+
+  events:
+    form:
+      save: "Сохранить"
+      back: "Назад"
+    show:
+      change: "Изменить"
+      inviting_user: "Приглашает:"
+      subscribers: "Идут:"
+      subscribe: "Я пойду:"
+
