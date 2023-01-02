@@ -92,3 +92,10 @@ ru:
       subscribers: "Идут:"
       subscribe: "Я пойду:"
 
+  layouts:
+    application:
+      sign_up: "Зарегистрироваться"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      user: "Профиль"
+
