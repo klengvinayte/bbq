@@ -1,10 +1,9 @@
-<div class="col-sm-6 col-md-4 my-2">
-  <div class="thumbnail card bg-image ">
-
+<div class="row col-sm-6 col-md-4 my-2 me-1" >
+  <div class="thumbnail card bg-image">
     <%= content_tag 'div', '', class: 'event-background',
                     style: "background-image: url(#{asset_path('event_thumb2.jpg')})" %>
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.5)">
-      <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="mask h-100" style=" background-color: rgba(0, 0, 0, 0.5)">
+      <div class="d-flex justify-content-center align-items-center">
         <div class=" card-body">
           <div class="caption card-text">
             <div class="event-description">
