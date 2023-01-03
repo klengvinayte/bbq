@@ -1,4 +1,4 @@
-<h2 class="mt-3">Регистрация</h2>
+<h2 class="mt-3"><%= t(".registration") %></h2>
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
@@ -21,7 +21,7 @@
     <div class="col-sm-5">
       <%= f.label "password", class: "mb-1" %>
       <% if @minimum_password_length %>
-        <em><small>(<%= @minimum_password_length %> символов минимум)</small></em>
+        <em><small>(<%= @minimum_password_length %> <%= t(".note1") %>)</small></em>
       <% end %><br/>
       <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
     </div>

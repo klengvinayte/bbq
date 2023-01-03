@@ -74,10 +74,19 @@ ru:
       back: "Назад"
     registrations:
       edit:
+        editing: "Редактировать "
         save: "Сохранить"
         back: "Назад"
+        delete_user: "Удалить аккаунт"
+        note1: "(оставьте пустым, если вы не хотите его менять)"
+        note2: " символов минимум"
+        note3: "(нам нужен ваш текущий пароль для подтверждения изменений)"
+        note4: "Мы все понимаем, иногда просто нужно уйти"
       new:
         sign_up: "Зарегистрироваться"
+        registration: "Регистрация"
+        note1: " символов минимум"
+
     sessions:
       new:
         sign_in: "Войти"
@@ -85,6 +94,14 @@ ru:
       links:
         forgot_your_password?: "Забыли парооль?"
         sign_up: "Зарегистрироваться"
+        log_in: "Войти"
+    edit:
+      edit_profile: "Редактирование профиля"
+      change_password: "Изменить пароль"
+    show:
+      edit_user: "Редактировать профиль"
+      organized: "Организовал:"
+      note1: "Пользователь пока не организовал ни одного события"
 
   events:
     form:
@@ -95,6 +112,14 @@ ru:
       inviting_user: "Приглашает:"
       subscribers: "Идут:"
       subscribe: "Я пойду:"
+    edit:
+      delete_event: "Удалить событие"
+      edit: "Редактирование события"
+    index:
+      create_event: "Создать событие"
+      events: "События"
+    new:
+      new_event: "Новое событие"
 
   layouts:
     application:
