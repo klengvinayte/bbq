@@ -5,6 +5,9 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+    errors:
+      messages:
+        taken: "Такой email уже существует"
 
     # Перевод атрибутов моделей
     attributes:
@@ -32,6 +35,7 @@ ru:
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие :('
     users:
+      error: "Такой email уже существует"
       updated: 'Вы обновили свой профиль'
     comments:
       destroyed: 'Комментарий удален'
@@ -59,7 +63,6 @@ ru:
 
 
   subscriptions:
-    error: "Такой email уже существует"
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
     form:

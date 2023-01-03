@@ -31,6 +31,6 @@ class Subscription < ApplicationRecord
   end
 
   def email_already_taken
-    errors.add(:user, :taken) unless User.find_by(email: user_email).nil?
+    errors.add(:base, :taken) unless User.find_by(email: user_email).nil?
   end
 end
