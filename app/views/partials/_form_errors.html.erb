@@ -1,15 +1,14 @@
 <% errors = model.errors %>
-
 <% if errors.any? %>
-  <div class="alert alert-danger">
-    <div class="lead buffer-bottom">
-      В вашей форме <%= I18n.t :'mistake', count: errors.count %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <div class="fs-6">
+      <p class="fw-bold mb-0"><%= I18n.t :'mistake', count: errors.count %></p>
+      <ul class="list-group list-group-flush">
+        <% errors.each do |error| %>
+          <li class="list-group-item list-group-item-danger"><%= error.full_message %></li>
+        <% end %>
+      </ul>
     </div>
-
-    <ul>
-      <% errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 <% end %>
