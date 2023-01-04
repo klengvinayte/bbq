@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="thumbnail card bg-image ">
         <%= content_tag 'div', '', class: 'event-background',
-                        style: "background-image: url(#{asset_path('event_thumb2.jpg')})" %>
+                        style: "background-image: url(#{event_photo(@event)})" %>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class=" card-body">
@@ -19,7 +19,7 @@
 
                   <div class="buffer-top">
                     <%= link_to t(".change"), edit_event_path(@event),
-                                class: 'btn btn-primary' %>
+                                class: 'btn btn-sm btn-primary' %>
                   </div>
                 <% end %>
               </div>
@@ -31,6 +31,18 @@
   </div>
   <div class="row">
     <div class="col-md-8">
+
+      <div class="event-photos">
+        <div class="event-photos-gallery">
+          <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+        </div>
+
+
+      <div class="event-photo-form">
+        <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+      </div>
+      </div>
+
       <div class="event-comments buffer-top">
         <%= render partial: 'comments/form',
                    locals: { comment: @new_comment || @event.comments.build } %>

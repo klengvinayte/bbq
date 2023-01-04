@@ -5,6 +5,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      photo: 'Фотография'
     errors:
       messages:
         taken: "Такой email уже существует"
@@ -14,6 +15,7 @@ ru:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: "Аватар"
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
@@ -29,6 +31,8 @@ ru:
       comment:
         user_name: "Имя"
         body: "Комментарий"
+      photo:
+        photo: 'Фотография'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -45,6 +49,10 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
   app:
     name: 'Шашлыки'
     company: 'Хороший программист'

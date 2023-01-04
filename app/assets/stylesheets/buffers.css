@@ -38,3 +38,13 @@
 .thumbnail-inner {
   padding: 20px 4px 4px;
 }
+
+.user-avatar .img-icon {
+  margin-top: -2px;
+  height: 20px;
+}
+
+.user-avatar-main {
+  margin-top: -2px;
+  height: 250px;
+}

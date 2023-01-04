@@ -6,11 +6,13 @@ ruby "3.1.2"
 gem "rails", "~> 7.0.4"
 
 gem "devise"
-gem 'devise-i18n'
-gem 'russian'
+gem "devise-i18n"
+gem "russian"
 gem "rails-i18n"
-gem 'font-awesome-rails'
+gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.2.1"
+gem "carrierwave"
+gem "rmagick"
 
 gem "sprockets-rails"
 
@@ -46,5 +48,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
