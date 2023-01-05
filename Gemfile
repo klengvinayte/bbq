@@ -13,6 +13,7 @@ gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.2.1"
 gem "carrierwave"
 gem "rmagick"
+gem 'fog-aws'
 
 gem "sprockets-rails"
 
