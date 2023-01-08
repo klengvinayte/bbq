@@ -1,15 +1,15 @@
 module ApplicationHelper
   def user_avatar(user)
     if user.avatar?
-      user.avatar.url
+      url_for user.avatar.variant(resize_to_fill: [400, 400])
     else
       asset_path('user.png')
     end
   end
 
   def user_avatar_thumb(user)
-    if user.avatar.file.present?
-      user.avatar.thumb.url
+    if user.avatar.attached?
+      url_for user.avatar.variant(:thumb)
     else
       asset_path('user.png')
     end

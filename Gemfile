@@ -11,9 +11,7 @@ gem "russian"
 gem "rails-i18n"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.2.1"
-gem "carrierwave"
 gem "rmagick"
-gem "fog-aws"
 gem "image_processing", ">= 1.2"
 gem "aws-sdk-s3", require: false
 
