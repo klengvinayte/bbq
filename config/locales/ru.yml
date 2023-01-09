@@ -33,6 +33,7 @@ ru:
         body: "Комментарий"
       photo:
         photo: 'Фотография'
+        download: "Загрузить"
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -151,4 +152,8 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+
+  photos:
+    form:
+      download: "Загрузить"
 
