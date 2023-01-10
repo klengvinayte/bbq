@@ -100,6 +100,12 @@ ru:
         forgot_your_password?: "Забыли пароль?"
         email: 'Email'
         send_me_reset_password_instructions: "Прислать инструкции по сбросу пароля"
+      edit:
+        change_your_password: "Измените свой пароль"
+        password: "Пароль"
+        characters_minimum: " символов минимум"
+        password_confirmation: "Подтвердите пароль"
+        сhange_my_password: "Изменить пароль"
 
 
     sessions:
