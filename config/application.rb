@@ -10,6 +10,8 @@ module Bbq
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.generators.test_framework false
+    # config.generators.system_tests = nil
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -20,5 +22,7 @@ module Bbq
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     config.i18n.default_locale = :ru
+
+    config.action_mailer.delivery_method = :mailjet
   end
 end

@@ -14,6 +14,7 @@ gem "font-awesome-sass", "~> 6.2.1"
 gem "rmagick"
 gem "image_processing", ">= 1.2"
 gem "aws-sdk-s3", require: false
+gem "mailjet"
 
 gem "sprockets-rails"
 
