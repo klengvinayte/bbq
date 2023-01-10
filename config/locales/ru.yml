@@ -106,8 +106,9 @@ ru:
         characters_minimum: " символов минимум"
         password_confirmation: "Подтвердите пароль"
         сhange_my_password: "Изменить пароль"
-
-
+        new_password: "Новый пароль"
+        confirm_new_password: "Подтвердите пароль"
+        
     sessions:
       new:
         sign_in: "Войти"
