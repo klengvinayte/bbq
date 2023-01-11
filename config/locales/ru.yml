@@ -3,9 +3,9 @@ ru:
   activerecord:
     # Перевод названия моделей
     models:
-      user: 'Пользователь'
-      event: 'Событие'
-      photo: 'Фотография'
+      user: "Пользователь"
+      event: "Событие"
+      photo: "Фотография"
     errors:
       messages:
         taken: "Такой email уже существует"
@@ -13,18 +13,18 @@ ru:
     # Перевод атрибутов моделей
     attributes:
       user:
-        email: 'Email'
-        name: 'Имя'
+        email: "Email"
+        name: "Имя"
         avatar: "Аватар"
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
-        current_password: 'Текущий пароль'
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
         remember_me: "Запомнить меня"
       event:
-        title: 'Название'
-        address: 'Место проведения'
-        datetime: 'Дата и время'
-        description: 'Описание'
+        title: "Название"
+        address: "Место проведения"
+        datetime: "Дата и время"
+        description: "Описание"
       subscription:
         user_email: "Email"
         user_name: "Имя"
@@ -32,48 +32,48 @@ ru:
         user_name: "Имя"
         body: "Комментарий"
       photo:
-        photo: 'Фотография'
+        photo: "Фотография"
         download: "Загрузить"
   controllers:
     events:
-      created: 'Вы создали новое мероприятие'
-      updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
+      created: "Вы создали новое мероприятие"
+      updated: "Вы обновили мероприятие"
+      destroyed: "Вы удалили мероприятие :("
     users:
       error: "Такой email уже существует"
-      updated: 'Вы обновили свой профиль'
+      updated: "Вы обновили свой профиль"
     comments:
-      destroyed: 'Комментарий удален'
-      created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'
+      destroyed: "Комментарий удален"
+      created: "Ваш комментарий добавлен"
+      error: "Ошибка с комментарием"
     subscriptions:
-      created: 'Вы подписаны на это событие'
-      destroyed: 'Участник отписан'
-      error: 'Подписка/отписка не сработала'
+      created: "Вы подписаны на это событие"
+      destroyed: "Участник отписан"
+      error: "Подписка/отписка не сработала"
     photos:
-      error: 'Что-то не так с фоткой'
-      created: 'Вы добавили фотографию к событию'
-      destroyed: 'Вы удалили фотку'
+      error: "Что-то не так с фоткой"
+      created: "Вы добавили фотографию к событию"
+      destroyed: "Вы удалили фотку"
   app:
-    name: 'Шашлыки'
-    company: 'Хороший программист'
+    name: "Шашлыки"
+    company: "Хороший программист"
   alert:
-    notice: 'Вы уверены?'
+    notice: "Вы уверены?"
   mistake:
-    one: '%{count} ошибка'
-    few: '%{count} ошибки'
-    many: '%{count} ошибок'
+    one: "%{count} ошибка"
+    few: "%{count} ошибки"
+    many: "%{count} ошибок"
 
   comments:
     comment:
-      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+      destroy_confirm: "Вы уверены, что хотите удалить этот комментарий?"
     form:
       send: "Отправить"
 
 
   subscriptions:
     subscription:
-      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      destroy_confirm: "Вы уверены, что хотите удалить эту подписку?"
     form:
       subscribe: "Подписаться"
 
@@ -108,6 +108,13 @@ ru:
         сhange_my_password: "Изменить пароль"
         new_password: "Новый пароль"
         confirm_new_password: "Подтвердите пароль"
+    mailer:
+      reset_password_instructions:
+        hello: "Добрый день "
+        info: "Кто-то запросил ссылку для смены вашего пароля. Вы можете сделать это по ссылке ниже."
+        change: "Изменить пароль"
+        info2: "Если вы не запрашивали смену пароля, пожалуйста, проигнорируйте это электронное письмо."
+        info3: "Ваш пароль не изменится до тех пор, пока вы не перейдете по ссылке выше и не создадите новый."
 
     sessions:
       new:
@@ -152,19 +159,26 @@ ru:
 
   event_mailer:
     comment:
-      title: 'Новый комментарий'
-      author: 'Автор'
-      event: 'Событие'
-      datetime: 'Состоится'
-      owner: 'Организатор'
+      title: "Новый комментарий"
+      author: "Автор"
+      event: "Событие"
+      datetime: "Состоится"
+      owner: "Организатор"
     subscription:
-      title: 'Новая подписка'
-      name: 'Имя'
-      email: 'Email'
-      author: 'Автор'
-      event: 'Событие'
-      datetime: 'Состоится'
-      owner: 'Организатор'
+      title: "Новая подписка"
+      name: "Имя"
+      email: "Email"
+      author: "Автор"
+      event: "Событие"
+      datetime: "Состоится"
+      owner: "Организатор"
+    photo:
+      title: "Новая фотография"
+      event: "Событие"
+      photo: "Фотография"
+      owner: "Добавил"
+      datetime: "Состоится"
+      author: "Автор"
 
   photos:
     form:
