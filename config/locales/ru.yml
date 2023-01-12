@@ -164,6 +164,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      subject: "Новый комментарий к событию: %{event}"
     subscription:
       title: "Новая подписка"
       name: "Имя"
@@ -172,6 +173,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      subject: "Новый подписка на событие: %{event}"
     photo:
       title: "Новая фотография"
       event: "Событие"
@@ -179,6 +181,7 @@ ru:
       owner: "Добавил"
       datetime: "Состоится"
       author: "Автор"
+      subject: "Новое фото добавлено к событию: %{event}"
 
   photos:
     form:

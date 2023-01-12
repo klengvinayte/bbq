@@ -1,6 +1,6 @@
 <h1><%= t '.title' %></h1>
 
-<p><%= t '.author' %>: <strong><%= @photo.user_name %></strong></p>
+<p><%= t '.author' %>: <strong><%= link_to @photo.user.name, @photo.user %></strong></p>
 
 <hr/>
 
