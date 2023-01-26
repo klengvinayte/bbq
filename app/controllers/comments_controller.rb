@@ -45,7 +45,7 @@ class CommentsController < ApplicationController
 
   def notify_subscribers(comment)
     all_emails = (comment.event.subscriptions.map(&:user_email) + [comment.event.user.email]).uniq
-    all_emails -= [comment.user.email] if comment.user.present?
+    all_emails -= [comment.user&.email]
 
     all_emails.each do |mail|
       EventMailer.comment(comment, mail).deliver_later

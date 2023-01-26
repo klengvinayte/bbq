@@ -25,6 +25,7 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+        pincode: 'Пин-код доступа'
       subscription:
         user_email: "Email"
         user_name: "Имя"
@@ -39,6 +40,7 @@ ru:
       created: "Вы создали новое мероприятие"
       updated: "Вы обновили мероприятие"
       destroyed: "Вы удалили мероприятие :("
+      wrong_pincode: 'Неверный пин-код!'
     users:
       error: "Такой email уже существует"
       updated: "Вы обновили свой профиль"
