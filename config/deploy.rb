@@ -8,10 +8,11 @@ set :repo_url, "git@github.com:klengvinayte/bbq.git"
 set :deploy_to, '/home/deploy/bbq_cap'
 
 # Файлы, которые лежат вне репозитория
-append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', "config/master.key", ".env"
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
-# Default branch is :master
+Default branch is :main
+
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
