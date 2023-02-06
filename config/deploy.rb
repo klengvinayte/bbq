@@ -6,13 +6,13 @@ set :repo_url, "git@github.com:klengvinayte/bbq.git"
 
 # Папка, где будет храниться приложение
 set :deploy_to, '/home/deploy/bbq_cap'
+set :branch, "main"
 
 # Файлы, которые лежат вне репозитория
 append :linked_files, 'config/database.yml', "config/master.key", ".env"
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
-Default branch is :main
-
+# Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
