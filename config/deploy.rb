@@ -5,7 +5,7 @@ set :application, "bbq"
 set :repo_url, "git@github.com:klengvinayte/bbq.git"
 
 # Папка, где будет храниться приложение
-set :deploy_to, '/home/deploy/bbq'
+set :deploy_to, '/home/deploy/bbq_cap'
 
 # Файлы, которые лежат вне репозитория
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
