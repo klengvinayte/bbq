@@ -17,6 +17,9 @@ gem "image_processing", ">= 1.2"
 gem "aws-sdk-s3", require: false
 gem "mailjet"
 
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
+
 gem "sprockets-rails"
 
 gem "puma", "~> 5.0"
@@ -41,6 +44,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano', '~> 3.8'
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-passenger', '~> 0.2'
+  gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-bundler', '~> 1.2'
+
   gem "web-console"
 end
 
