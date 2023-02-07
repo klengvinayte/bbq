@@ -12,7 +12,7 @@ class SubscriptionsController < ApplicationController
 
     if @new_subscription.save
       # EventMailer.subscription(@new_subscription).deliver_later
-      EventMailer.subscription(@event, @new_subscription).deliver_later
+      EventMailer.subscription(@new_subscription, @event.user.email).deliver_later
       # Если сохранилась, редиректим на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
