@@ -189,3 +189,7 @@ ru:
     form:
       download: "Загрузить"
 
+  pundit:
+    not_authorized: 'Вам сюда нельзя'
+    wrong_pincode: "Пин-Код указан не верно"
+

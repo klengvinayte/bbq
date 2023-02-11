@@ -7,7 +7,7 @@ gem "rails", "~> 7.0.4"
 
 gem "devise"
 gem "devise-i18n"
-gem 'dotenv-rails'
+gem "dotenv-rails"
 gem "russian"
 gem "rails-i18n"
 gem "font-awesome-rails"
@@ -20,6 +20,7 @@ gem "mailjet"
 gem "sprockets-rails"
 
 gem "puma", "~> 5.0"
+gem "pundit"
 
 gem "jsbundling-rails"
 
@@ -38,6 +39,9 @@ gem "bootsnap", require: false
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 group :development do
