@@ -3,56 +3,48 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "rails", "~> 7.0.4"
-
+gem "aws-sdk-s3", require: false
+gem "bootsnap", require: false
+gem "cssbundling-rails"
 gem "devise"
 gem "devise-i18n"
 gem "dotenv-rails"
-gem "russian"
-gem "rails-i18n"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 6.2.1"
-gem "rmagick"
 gem "image_processing", ">= 1.2"
-gem "aws-sdk-s3", require: false
+gem "jbuilder"
+gem "jsbundling-rails"
 gem "mailjet"
-
-gem "sprockets-rails"
-
 gem "puma", "~> 5.0"
 gem "pundit"
-
-gem "jsbundling-rails"
-
-gem "turbo-rails"
-
+gem "rails", "~> 7.0.4"
+gem "rails-i18n"
+gem "resque", "~> 2.4"
+gem "russian"
+gem "rmagick"
+gem "sprockets-rails"
 gem "stimulus-rails"
-
-gem "cssbundling-rails"
-
-gem "jbuilder"
-
+gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
-
-gem "bootsnap", require: false
 
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
-  gem 'factory_bot_rails'
-  gem 'shoulda-matchers', '~> 5.3'
+  gem "rspec-rails", "~> 6.0", ">= 6.0.1"
+  gem "factory_bot_rails"
+  gem "shoulda-matchers", "~> 5.3"
 end
 
 group :development do
-  gem 'ed25519'
-  gem 'bcrypt_pbkdf'
-  gem 'capistrano', '~> 3.8'
-  gem 'capistrano-rails', '~> 1.2'
-  gem 'capistrano-passenger', '~> 0.2'
-  gem 'capistrano-rbenv', '~> 2.1'
-  gem 'capistrano-bundler', '~> 1.2'
-
+  gem "ed25519", '~> 1.3.0'
+  gem "bcrypt_pbkdf", '~> 1.1.0'
+  gem "capistrano"
+  gem "capistrano-rails", '~> 1.6'
+  gem 'capistrano-resque', '~> 0.2.3', require: false
+  gem "capistrano-passenger"
+  gem "capistrano-rbenv", '~> 2.2'
+  gem "capistrano-bundler", '~> 2.0'
+  gem "letter_opener"
   gem "web-console"
 end
 
