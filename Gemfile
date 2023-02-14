@@ -15,6 +15,8 @@ gem "image_processing", ">= 1.2"
 gem "jbuilder"
 gem "jsbundling-rails"
 gem "mailjet"
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem "puma", "~> 5.0"
 gem "pundit"
 gem "rails", "~> 7.0.4"
