@@ -276,6 +276,9 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV["OMNIAUTH_FACEBOOK_ID"],
                   ENV["OMNIAUTH_FACEBOOK_SECRET"]
 
+  config.omniauth :github, ENV["PROD_OMNIAUTH_GITHUB_ID"], ENV["PROD_OMNIAUTH_GITHUB_SECRET"], scope: "user:email"
+  OmniAuth.config.logger = Rails.logger if Rails.env.development?
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
