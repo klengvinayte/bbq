@@ -9,6 +9,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     signin_and_redirect(@user, "Facebook")
   end
 
+  def google_oauth2
+    @user = User.find_for_oauth(request.env["omniauth.auth"])
+    signin_and_redirect(@user, "Google")
+  end
+
   def signin_and_redirect(user, provider)
 
     if user.persisted?

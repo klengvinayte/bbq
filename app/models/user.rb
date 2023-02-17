@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: %i[github facebook]
+         :omniauthable, omniauth_providers: %i[github facebook google_oauth2]
 
   has_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -18,9 +18,11 @@ class User < ApplicationRecord
   end
 
   def self.find_for_oauth(access_token)
+    # debugger
     # Достаём email из токена
     email = access_token.info.email
     user = where(email: email).first
+    avatar_url = access_token.info.image
 
     # Возвращаем, если нашёлся
     return user if user.present?
@@ -35,6 +37,8 @@ class User < ApplicationRecord
     when provider == "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
+    when provider == "google_oauth2"
+      url = "google/#{email}"
     end
 
     # Теперь ищем в базе запись по провайдеру и урлу
@@ -44,6 +48,7 @@ class User < ApplicationRecord
       user.email = email
       user.name = name
       user.password = Devise.friendly_token.first(16)
+      user.avatar = avatar_url
     end
   end
 
