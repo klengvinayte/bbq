@@ -277,10 +277,10 @@ Devise.setup do |config|
                   ENV["OMNIAUTH_FACEBOOK_SECRET"]
 
   # config.omniauth :github, ENV["PROD_OMNIAUTH_GITHUB_ID"], ENV["PROD_OMNIAUTH_GITHUB_SECRET"], scope: "user:email"
-  config.omniauth :github, ENV["OMNIAUTH_GITHUB_ID"], ENV["OMNIAUTH_GITHUB_SECRET"], scope: "user:email"
+  config.omniauth :github, ENV["PROD_OMNIAUTH_GITHUB_ID"], ENV["PROD_OMNIAUTH_GITHUB_SECRET"], scope: "user:email"
   # OmniAuth.config.logger = Rails.logger if Rails.env.development?
 
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
+  config.omniauth :google_oauth2, ENV['PROD_GOOGLE_CLIENT_ID'], ENV['PROD_GOOGLE_CLIENT_SECRET']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
