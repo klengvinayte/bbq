@@ -15,8 +15,6 @@ module ApplicationHelper
     end
   end
 
-  # Возвращает адрес рандомной фотки события, если есть хотя бы одна
-  # Или ссылку на картинку по умолчанию
   def event_photo(event)
     photos = event.photos.persisted
 
@@ -27,7 +25,6 @@ module ApplicationHelper
     end
   end
 
-  # Возвращает миниатюрную версию фотки
   def event_thumb(event)
     photos = event.photos.persisted
 
@@ -40,5 +37,16 @@ module ApplicationHelper
 
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
+  end
+
+  def bs_icon(name)
+    case
+    when name == :google_oauth2
+      "<i class=\"bi bi-google\"></i>".html_safe
+    when name == :github
+      "<i class=\"bi bi-github\"></i>".html_safe
+    when name == :facebook
+      "<i class=\"bi bi-facebook\"></i>".html_safe
+    end
   end
 end

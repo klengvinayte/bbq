@@ -1,7 +1,5 @@
 ru:
-  # Перевод моделей
   activerecord:
-    # Перевод названия моделей
     models:
       user: "Пользователь"
       event: "Событие"
@@ -10,7 +8,6 @@ ru:
       messages:
         taken: "Такой email уже существует"
 
-    # Перевод атрибутов моделей
     attributes:
       user:
         email: "Email"
@@ -151,6 +148,10 @@ ru:
       events: "События"
     new:
       new_event: "Новое событие"
+    password-form:
+      title: "Доступ только по пин-коду"
+      save: "Сохранить"
+      back: "На главную"
 
   layouts:
     application:
@@ -188,8 +189,9 @@ ru:
   photos:
     form:
       download: "Загрузить"
+    photo:
+      added: "Добавил"
 
   pundit:
     not_authorized: 'Вам сюда нельзя'
     wrong_pincode: "Пин-Код указан не верно"
-

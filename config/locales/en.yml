@@ -1,33 +1,197 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user: "User"
+      event: "Event"
+      photo: "Photo"
+    errors:
+      messages:
+        taken: "This email already exists"
+
+    attributes:
+      user:
+        email: "Email"
+        name: "Name"
+        avatar: "Avatar"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        remember_me: "Remember me"
+      event:
+        title: "Title"
+        address: "Address"
+        datetime: "Datetime"
+        description: "Description"
+        pincode: 'Pincode'
+      subscription:
+        user_email: "Email"
+        user_name: "User name"
+      comment:
+        user_name: "User name"
+        body: "Comment"
+      photo:
+        photo: "Photo"
+        download: "Download"
+  controllers:
+    events:
+      created: "You have created a new event"
+      updated: "You have updated the event"
+      destroyed: "You deleted the event :("
+      wrong_pincode: 'Invalid PIN code'
+    users:
+      error: "This email already exists"
+      updated: "You have updated your profile"
+    comments:
+      destroyed: "Comment deleted"
+      created: "Your comment has been added"
+      error: "Error with comment"
+    subscriptions:
+      created: "You have subscribed to this event"
+      destroyed: "The user has been unsubscribed"
+      error: "Subscription/unsubscription failed"
+    photos:
+      error: "Something is wrong with the photo"
+      created: "You added a photo to the event"
+      destroyed: "You deleted the photo"
+  app:
+    name: "BBQ"
+    company: "Kristina Lengvinayte"
+  alert:
+    notice: "Are you sure?"
+  mistake:
+    one: "%{count} error"
+    few: "%{count} errors"
+    many: "%{count} errors"
+
+  comments:
+    comment:
+      destroy_confirm: "Are you sure you want to delete this comment?"
+    form:
+      send: "Send"
+
+
+  subscriptions:
+    subscription:
+      destroy_confirm: "Are you sure you want to delete this subscription?"
+    form:
+      subscribe: "Subscribe"
+
+  users:
+    form:
+      save: "Save"
+      back: "Back"
+    registrations:
+      edit:
+        editing: "Edit "
+        save: "Save"
+        back: "Back"
+        delete_user: "Delete Account"
+        note1: "(leave it blank if you don't want to change it)"
+        note2: " characters minimum"
+        note3: "(we need your current password to confirm the changes)"
+        note4: "We all understand, sometimes you just need to leave"
+      new:
+        sign_up: "Sign up"
+        registration: "Registration"
+        note1: " characters minimum"
+    passwords:
+      new:
+        forgot_your_password?: "Forgot your password?"
+        email: 'Email'
+        send_me_reset_password_instructions: "Send instructions on password reset"
+      edit:
+        change_your_password: "Change your password"
+        password: "Password"
+        characters_minimum: " characters minimum"
+        password_confirmation: "Confirm your password"
+        сhange_my_password: "Change password"
+        new_password: "New password"
+        confirm_new_password: "Confirm your password"
+    mailer:
+      reset_password_instructions:
+        hello: "Hello "
+        info: "Someone has requested a link to change your password. You can do this at the link below."
+        change: "Change password"
+        info2: "If you have not requested a password change, please ignore this email."
+        info3: "Your password will not change until you click on the link above and create a new one."
+
+    sessions:
+      new:
+        sign_in: "Sign in"
+    shared:
+      links:
+        forgot_your_password?: "Forgot your password?"
+        sign_up: "Sign up"
+        log_in: "Log in"
+    edit:
+      edit_profile: "Editing a profile"
+      change_password: "Change password"
+    show:
+      edit_user: "Edit Profile"
+      organized: "Organized events:"
+      note1: "The user has not organized any events yet"
+
+  events:
+    form:
+      save: "Save"
+      back: "Back"
+    show:
+      change: "Change"
+      inviting_user: "Invites:"
+      subscribers: "Go to the event:"
+      subscribe: "I will go:"
+    edit:
+      delete_event: "Delete an event"
+      edit: "Editing an event"
+    index:
+      create_event: "Create an event"
+      events: "Events"
+    new:
+      new_event: "New event"
+    password_form:
+        title: "PIN-only access"
+        save: "Save"
+        back: "Back"
+
+  layouts:
+    application:
+      sign_up: "Sign up"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      user: "User"
+
+  event_mailer:
+    comment:
+      title: "New comment"
+      author: "Author"
+      event: "Event"
+      datetime: "Datetime"
+      owner: "Owner"
+      subject: "New comment for the event: %{event}"
+    subscription:
+      title: "New subscription"
+      name: "Name"
+      email: "Email"
+      author: "Author"
+      event: "Event"
+      datetime: "Datetime"
+      owner: "Owner"
+      subject: "New Event subscription: %{event}"
+    photo:
+      title: "New photo"
+      event: "Event"
+      photo: "Photo"
+      owner: "Added"
+      datetime: "Datetime"
+      author: "Author"
+      subject: "New photo added to the event: %{event}"
+
+  photos:
+    form:
+      download: "Download"
+    photo:
+      added: "added"
+
+  pundit:
+    not_authorized: "You can't come here"
+    wrong_pincode: "The PIN code is incorrect"

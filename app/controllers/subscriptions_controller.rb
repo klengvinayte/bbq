@@ -1,8 +1,6 @@
 class SubscriptionsController < ApplicationController
-  # Задаем родительский event для подписки
   before_action :set_event, only: [:create, :destroy]
 
-  # Задаем подписку, которую юзер хочет удалить
   before_action :set_subscription, only: [:destroy]
 
   def create
