@@ -36,7 +36,7 @@ class User < ApplicationRecord
     when "github"
       id = access_token.extra.raw_info.url
       url = "https://github.com/#{id}"
-      name = access_token.extra.raw_info.name
+      name = access_token.info.login
     when "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
