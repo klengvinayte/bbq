@@ -1,4 +1,4 @@
-require 'open-uri'
+require "open-uri"
 
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
@@ -21,22 +21,22 @@ class User < ApplicationRecord
 
   def self.find_for_oauth(access_token)
     # debugger
-    # Достаём email из токена
+    # We get the email from the token
     email = access_token.info.email
     user = where(email: email).first
     avatar_url = access_token.info.image
 
-    # Возвращаем, если нашёлся
+    # We return it if found
     return user if user.present?
 
-    # Если не нашёлся, достаём провайдера, айдишник и урл
+    # If not found, we get the provider, ID and URL
     provider = access_token.provider
 
     case provider
     when "github"
       id = access_token.extra.raw_info.url
       url = "https://github.com/#{id}"
-      name = access_token.info.login
+      name = access_token.info.name
     when "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
@@ -46,10 +46,10 @@ class User < ApplicationRecord
       name = access_token.info.name
     end
 
-    # Теперь ищем в базе запись по провайдеру и урлу
-    # Если есть, то вернётся, если нет, то будет создана новая
+    # Now we are looking for a record in the database by provider and URL
+    # If there is, it will return, if not, a new one will be created
     where(url: url, provider: provider).first_or_create! do |user|
-      # Если создаём новую запись, прописываем email и пароль
+      # If we create a new record, we prescribe an email and password
       user.email = email
       user.name = name
       user.password = Devise.friendly_token.first(16)
