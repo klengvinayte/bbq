@@ -20,7 +20,7 @@ class User < ApplicationRecord
   end
 
   def self.find_for_oauth(access_token)
-    # debugger
+    debugger
     # Достаём email из токена
     email = access_token.info.email
     user = where(email: email).first
@@ -36,11 +36,14 @@ class User < ApplicationRecord
     when "github"
       id = access_token.extra.raw_info.url
       url = "https://github.com/#{id}"
+      name = access_token.raw_info.name
     when "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
+      name = access_token.raw_info.name
     when "google_oauth2"
       url = "google/#{email}"
+      name = access_token.info.name
     end
 
     # Теперь ищем в базе запись по провайдеру и урлу
