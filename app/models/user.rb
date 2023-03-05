@@ -20,7 +20,7 @@ class User < ApplicationRecord
   end
 
   def self.find_for_oauth(access_token)
-    debugger
+    # debugger
     # Достаём email из токена
     email = access_token.info.email
     user = where(email: email).first
