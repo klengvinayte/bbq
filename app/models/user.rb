@@ -36,11 +36,11 @@ class User < ApplicationRecord
     when "github"
       id = access_token.extra.raw_info.url
       url = "https://github.com/#{id}"
-      name = access_token.raw_info.name
+      name = access_token.extra.raw_info.name
     when "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
-      name = access_token.raw_info.name
+      name = access_token.extra.raw_info.name
     when "google_oauth2"
       url = "google/#{email}"
       name = access_token.info.name
