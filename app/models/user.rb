@@ -30,14 +30,14 @@ class User < ApplicationRecord
     # Если не нашёлся, достаём провайдера, айдишник и урл
     provider = access_token.provider
 
-    case
-    when provider == "github"
+    case provider
+    when "github"
       id = access_token.extra.raw_info.url
       url = "https://github.com/#{id}"
-    when provider == "facebook"
+    when "facebook"
       id = access_token.extra.raw_info.id
       url = "https://facebook.com/#{id}"
-    when provider == "google_oauth2"
+    when "google_oauth2"
       url = "google/#{email}"
     end
 
@@ -48,14 +48,14 @@ class User < ApplicationRecord
       user.email = email
       user.name = name
       user.password = Devise.friendly_token.first(16)
-      user.avatar = avatar_url
+      user.avatar.attach(io: URI.open("#{avatar_url}"), filename: "name_avatar") if avatar_url.present?
     end
   end
 
   private
 
   def set_name
-    self.name = "Товарисч №#{rand(777)}" if self.name.blank?
+    self.name = "User №#{rand(777)}" if self.name.blank?
   end
 
   def link_subscriptions
