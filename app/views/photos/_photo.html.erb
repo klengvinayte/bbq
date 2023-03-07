@@ -1,6 +1,7 @@
 <div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.variant(:thumb)), photo.photo.url, class: "lightbox-toggle", data: { gallery: "example-gallery"}  %>
+  <%= link_to image_tag(photo.photo.variant(:thumb)), photo.photo.url,
+              class: "lightbox-toggle", data: { gallery: "example-gallery" } %>
 
-  <%= t('.added')%> <%= render partial: 'users/user', object: photo.user %>
+  <%= t(".added") %> <%= render partial: "users/user", object: photo.user %>
 </div>
 

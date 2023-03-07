@@ -17,7 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def signin_and_redirect(user, provider)
 
     if user.persisted?
-      flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: "#{provider}")
+      flash[:notice] = I18n.t("devise.omniauth_callbacks.success", kind: "#{provider}")
       sign_in_and_redirect user, event: :authentication
     else
       flash[:error] = I18n.t(

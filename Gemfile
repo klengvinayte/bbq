@@ -15,11 +15,11 @@ gem "image_processing", ">= 1.2"
 gem "jbuilder"
 gem "jsbundling-rails"
 gem "mailjet"
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
-gem 'omniauth-rails_csrf_protection'
-gem 'omniauth-google-oauth2'
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-github", github: "omniauth/omniauth-github", branch: "master"
+gem "omniauth-rails_csrf_protection"
+gem "omniauth-google-oauth2"
 gem "puma", "~> 5.0"
 gem "pundit"
 gem "rails", "~> 7.0.4"
@@ -41,14 +41,14 @@ group :development, :test do
 end
 
 group :development do
-  gem "ed25519", '~> 1.3.0'
-  gem "bcrypt_pbkdf", '~> 1.1.0'
+  gem "ed25519", "~> 1.3.0"
+  gem "bcrypt_pbkdf", "~> 1.1.0"
   gem "capistrano"
-  gem "capistrano-rails", '~> 1.6'
-  gem 'capistrano-resque', '~> 0.2.3', require: false
+  gem "capistrano-rails", "~> 1.6"
+  gem "capistrano-resque", "~> 0.2.3", require: false
   gem "capistrano-passenger"
-  gem "capistrano-rbenv", '~> 2.2'
-  gem "capistrano-bundler", '~> 2.0'
+  gem "capistrano-rbenv", "~> 2.2"
+  gem "capistrano-bundler", "~> 2.0"
   gem "letter_opener"
   gem "web-console"
 end

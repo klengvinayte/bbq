@@ -4,15 +4,15 @@ lock "~> 3.17.1"
 set :application, "bbq"
 set :repo_url, "git@github.com:klengvinayte/bbq.git"
 
-# Папка, где будет храниться приложение
-set :deploy_to, '/home/deploy/bbq_cap'
+# The folder where the application will be stored
+set :deploy_to, "/home/deploy/bbq_cap"
 set :branch, "main"
 
-# Файлы, которые лежат вне репозитория
-append :linked_files, 'config/database.yml', "config/master.key", ".env"
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
+# Files that lie outside the repository
+append :linked_files, "config/database.yml", "config/master.key", ".env"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
-after 'deploy:restart', 'resque:restart'
+after "deploy:restart", "resque:restart"
 
 # Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

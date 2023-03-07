@@ -3,7 +3,7 @@ module ApplicationHelper
     if user.avatar?
       url_for user.avatar.variant(resize_to_fill: [400, 400])
     else
-      asset_path('user.png')
+      asset_path("user.png")
     end
   end
 
@@ -11,7 +11,7 @@ module ApplicationHelper
     if user.avatar.attached?
       url_for user.avatar.variant(:thumb)
     else
-      asset_path('user.png')
+      asset_path("user.png")
     end
   end
 
@@ -21,7 +21,7 @@ module ApplicationHelper
     if photos.any?
       url_for photos.sample.photo.variant(:thumb)
     else
-      asset_path('event_thumb2.jpg')
+      asset_path("event_thumb2.jpg")
     end
   end
 
@@ -31,12 +31,12 @@ module ApplicationHelper
     if photos.any?
       photos.sample.photo.url
     else
-      asset_path('event_thumb.jpg')
+      asset_path("event_thumb.jpg")
     end
   end
 
   def fa_icon(icon_class)
-    content_tag 'span', '', class: "fa fa-#{icon_class}"
+    content_tag "span", '', class: "fa fa-#{icon_class}"
   end
 
   def bs_icon(name)

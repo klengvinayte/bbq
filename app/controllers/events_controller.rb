@@ -33,7 +33,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to event_url(@event), notice: I18n.t('controllers.events.created') }
+        format.html { redirect_to event_url(@event), notice: I18n.t("controllers.events.created") }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -47,7 +47,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to event_url(@event), notice: I18n.t('controllers.events.updated') }
+        format.html { redirect_to event_url(@event), notice: I18n.t("controllers.events.updated") }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -62,7 +62,7 @@ class EventsController < ApplicationController
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to events_url, notice: I18n.t('controllers.events.destroyed') }
+      format.html { redirect_to events_url, notice: I18n.t("controllers.events.destroyed") }
       format.json { head :no_content }
     end
   end

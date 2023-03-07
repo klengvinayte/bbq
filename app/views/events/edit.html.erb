@@ -2,12 +2,12 @@
 
 <div class="row">
   <div class="col-md-6 buffer-top">
-    <%= render 'form' %>
+    <%= render "form" %>
   </div>
 
   <div class="my-3">
 
     <%= button_to t(".delete_event"), event_path(@event), method: :delete, title: t(".delete_event"),
-                  data: { turbo_method: :delete, turbo_confirm: t('alert.notice') }, class: 'btn btn-sm btn-warning' %>
+                  data: { turbo_method: :delete, turbo_confirm: t("alert.notice") }, class: "btn btn-sm btn-warning" %>
   </div>
 </div>

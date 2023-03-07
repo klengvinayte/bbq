@@ -27,7 +27,7 @@ document.addEventListener("turbo:load", () => {
         myMap.setCenter(coordinates);
         myMap.setZoom(15);
       }, function (err) {
-        alert("Не можем найти такой адрес");
+        alert("We can't find such an address");
       }
     );
   }

@@ -11,24 +11,26 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<%= ENV["API_YANDEX_MAP"] %>&lang=ru_RU" type="text/javascript">
+<!--  <script src="https://api-maps.yandex.ru/2.1/?apikey=<%#= ENV["API_YANDEX_MAP"] %>&lang=ru_RU" type="text/javascript">-->
   </script>
-  <script src="maps.js" type="text/javascript"></script>
+<!--  <script src="maps.js" type="text/javascript"></script>-->
+  <meta name="turbo-visit-control" content="reload">
 </head>
 
 <body>
 <div class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <%= link_to "BBQ!", root_path, class: 'navbar-brand' %>
+    <%= link_to "BBQ!", root_path, class: "navbar-brand" %>
     <%#= link_to t('app.name'), root_path, class: 'navbar-brand' %>
     <div class="collapse navbar-collapse" data-toggle="collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to t('.user'), current_user, class: "nav-link" %></li>
-          <li class="nav-item"><%= button_to t('.sign_out'), destroy_user_session_path, method: :delete, class: "nav-link btn btn-outline-secondary btn-sm" %></li>
+          <li class="nav-item"><%= link_to t(".user"), current_user, class: "nav-link" %></li>
+          <li class="nav-item"><%= button_to t(".sign_out"), destroy_user_session_path, method: :delete,
+                                             class: "nav-link btn btn-outline-secondary btn-sm" %></li>
         <% else %>
-          <li class="nav-item"><%= link_to t('.sign_in'), new_user_session_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to t('.sign_up'),
+          <li class="nav-item"><%= link_to t(".sign_in"), new_user_session_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to t(".sign_up"),
                                            new_user_registration_path, class: "nav-link" %></li>
         <% end %>
       </ul>
@@ -47,11 +49,11 @@
       <%= yield %>
     </div>
     <div class="col-lg-3">
-    </div><!--/span-->
-  </div><!--/row-->
+    </div>
+  </div>
   <footer>
-    <p>&copy; <%= t('app.company') %> 2022</p>
+    <p>&copy; <%= t("app.company") %> 2022</p>
   </footer>
-</div> <!-- /container -->
+</div>
 </body>
 </html>

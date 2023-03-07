@@ -1,6 +1,6 @@
 <span class="subscription me-2">
   <% if subscription.user.present? %>
-    <%= render partial: 'users/user', object: subscription.user %>
+    <%= render partial: "users/user", object: subscription.user %>
   <% else %>
     <em><%= subscription.user_name %></em>
   <% end %>
@@ -10,7 +10,7 @@
           "",
           event_subscription_path(subscription.event, subscription),
           method: :delete,
-          data: {turbo_method: :delete, turbo_confirm: t('.destroy_confirm') }, class: "btn btn-sm btn-warning bi bi-trash"
+          data: {turbo_method: :delete, turbo_confirm: t(".destroy_confirm") }, class: "btn btn-sm btn-warning bi bi-trash"
         ) %>
   <% end %>
 </span>

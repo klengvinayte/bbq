@@ -1,33 +1,33 @@
 <%= form_for(@event) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: { model: @event } %>
+  <%= render partial: "partials/form_errors", locals: { model: @event } %>
 
   <div class="form-group mb-3">
     <%= f.label "title", class: "mb-1" %>
-    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= f.label "address", class: "mb-1" %>
-    <%= f.text_field :address, class: 'form-control' %>
+    <%= f.text_field :address, class: "form-control" %>
   </div>
 
   <div class="form-group mt-3">
     <%= f.label "datetime", class: "mb-1" %>
-    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
+    <p><%= f.datetime_select :datetime, class: "form-control" %></p>
   </div>
 
   <div class="form-group mb-3">
     <%= f.label "description", class: "mb-1" %>
-    <%= f.text_area :description, class: 'form-control' %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="form-group mb-3">
     <%= f.label "pincode", class: "mb-1" %>
-    <%= f.text_field :pincode, class: 'form-control' %>
+    <%= f.text_field :pincode, class: "form-control" %>
   </div>
 
   <div class="actions mb-3">
-    <%= f.submit t('.save'), class: 'btn btn-sm btn-primary' %>
-    or <%= link_to t('.back'), :back %>
+    <%= f.submit t(".save"), class: "btn btn-sm btn-primary" %>
+    or <%= link_to t(".back"), :back %>
   </div>
 <% end %>

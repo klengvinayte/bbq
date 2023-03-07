@@ -6,10 +6,9 @@
   <% if @user == current_user %>
     <p class="buffer-top btn btn-sm btn-info">
       <%= link_to t(".edit_user"), edit_user_path(@user),
-                  class: 'btn btn-sm btn-default' %>
+                  class: "btn btn-sm btn-default" %>
     </p>
   <% end %>
-
 
 </div>
 
@@ -18,7 +17,7 @@
     <% if @user.events.any? %>
       <h3><%= t(".organized") %></h3>
       <div class="row">
-        <%= render partial: 'events/event', collection: @user.events %>
+        <%= render partial: "events/event", collection: @user.events %>
       </div>
     <% else %>
       <p class="buffer-top"><%= t(".note1") %></p>

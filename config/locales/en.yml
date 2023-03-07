@@ -138,8 +138,8 @@ en:
     show:
       change: "Change"
       inviting_user: "Invites:"
-      subscribers: "Go to the event:"
-      subscribe: "I will go:"
+      subscribers: "Participants:"
+      subscribe: "Become a participant:"
     edit:
       delete_event: "Delete an event"
       edit: "Editing an event"
@@ -191,6 +191,7 @@ en:
       download: "Download"
     photo:
       added: "added"
+      destroy_confirm: "Are you sure?"
 
   pundit:
     not_authorized: "You can't come here"

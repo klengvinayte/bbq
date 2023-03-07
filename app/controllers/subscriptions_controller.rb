@@ -10,18 +10,18 @@ class SubscriptionsController < ApplicationController
     if @new_subscription.save
       # EventMailer.subscription(@new_subscription, @event.user.email).deliver_later
       SubscribersNotificationJob.perform_later(@new_subscription, @event.user.email)
-      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+      redirect_to @event, notice: I18n.t("controllers.subscriptions.created")
     else
-      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
+      render "events/show", alert: I18n.t("controllers.subscriptions.error")
     end
   end
 
   def destroy
-    message = { notice: I18n.t('controllers.subscriptions.destroyed') }
+    message = { notice: I18n.t("controllers.subscriptions.destroyed") }
     if current_user_can_edit?(@subscription)
       @subscription.destroy
     else
-      message = { alert: I18n.t('controllers.subscriptions.error') }
+      message = { alert: I18n.t("controllers.subscriptions.error") }
     end
 
     redirect_to @event, message
