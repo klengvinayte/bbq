@@ -63,5 +63,3 @@ production:
   password: <%= ENV['PG_RASSWORD'] %>
   database: <%= ENV['PG_DATABASE'] %>
 ```
-
-Then specify in `.env`
