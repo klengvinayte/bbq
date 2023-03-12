@@ -3,7 +3,9 @@
               class: "lightbox-toggle", data: { gallery: "example-gallery" } %>
 
   <%= t(".added") %> <%= render partial: "users/user", object: photo.user %>
-  <%= link_to("", event_photo_path(photo.event, photo), method: :delete,
-              data: { turbo_method: :delete, turbo_confirm: t(".destroy_confirm") },
-              class: "btn btn-sm btn-warning bi bi-trash") %>
+  <% if current_user_can_edit?(photo) %>
+    <%= link_to("", event_photo_path(photo.event, photo), method: :delete,
+                data: { turbo_method: :delete, turbo_confirm: t(".destroy_confirm"), turbo: false },
+                class: "btn btn-sm btn-warning bi bi-trash") %>
+  <% end %>
 </div>

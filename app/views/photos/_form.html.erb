@@ -1,12 +1,13 @@
 <%= form_for [@event, photo], html: { multipart: true }, data: { turbo: false } do |f| %>
-  <%= render partial: "partials/form_errors", locals: {model: photo} %>
+  <%= render partial: "partials/form_errors", locals: { model: photo } %>
 
-  <div class="form-group">
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-  </div>
-
-  <div class="actions mt-2">
-    <%= f.submit t(".download"), class: "btn btn-sm btn-primary" %>
-  </div>
+  <%# if user_signed_in? %>
+    <div class="form-group">
+      <%= f.label :photo %>
+      <%= f.file_field :photo %>
+    </div>
+    <div class="actions mt-2">
+      <%= f.submit t(".download"), class: "btn btn-sm btn-primary" %>
+    </div>
+  <%# end %>
 <% end %>
